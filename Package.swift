@@ -23,7 +23,6 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SPIRV-Cross",
-            dependencies: [],
             path: ".",
             exclude: ["CMakeLists.txt",
                       "CODE_OF_CONDUCT.adoc",
@@ -54,7 +53,8 @@ let package = Package(
                       "test_shaders.py",
                       "test_shaders.sh",
                       "tests-other",
-                      "update_test_shaders.sh"],
+                      "update_test_shaders.sh",
+                      "old_include"],
             sources: ["spirv_cfg.cpp",
                       "spirv_cpp.cpp",
                       "spirv_cross.cpp",
