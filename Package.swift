@@ -53,8 +53,7 @@ let package = Package(
                       "test_shaders.py",
                       "test_shaders.sh",
                       "tests-other",
-                      "update_test_shaders.sh",
-                      "old_include"],
+                      "update_test_shaders.sh"],
             sources: ["spirv_cfg.cpp",
                       "spirv_cpp.cpp",
                       "spirv_cross.cpp",
@@ -66,7 +65,15 @@ let package = Package(
                       "spirv_msl.cpp",
                       "spirv_parser.cpp",
                       "spirv_reflect.cpp"],
-            publicHeadersPath: "."),
+            publicHeadersPath: ".",
+            cxxSettings: [
+                .define("SPIRV_CROSS_C_API_CPP", to: "1"),
+                .define("SPIRV_CROSS_C_API_GLSL", to: "1"),
+                .define("SPIRV_CROSS_C_API_HLSL", to: "1"),
+                .define("SPIRV_CROSS_C_API_MSL", to: "1"),
+                .define("SPIRV_CROSS_C_API_REFLECT", to: "1")
+            ]
+        ),
     ],
     cxxLanguageStandard: .cxx14
 )
