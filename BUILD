@@ -25,5 +25,6 @@ cc_library(
         "SPIRV_CROSS_C_API_MSL=1",
         "SPIRV_CROSS_C_API_REFLECT=1",
     ],
-    visibility = ["//visibility:public"]
+    visibility = ["//visibility:public"],
+    tags = ["swift_module=SPIRV_Cross"]
 )

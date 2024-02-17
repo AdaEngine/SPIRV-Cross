@@ -4,3 +4,9 @@
 #
 # For more details, please check https://github.com/bazelbuild/bazel/issues/18958
 ###############################################################################
+
+module(
+    name = "SPIRV-Cross",
+    version = "1.0.0",
+    repo_name = "AdaEngine"
+)
