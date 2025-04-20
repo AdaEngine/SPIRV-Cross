@@ -65,7 +65,7 @@ let package = Package(
                       "spirv_msl.cpp",
                       "spirv_parser.cpp",
                       "spirv_reflect.cpp"],
-            publicHeadersPath: ".",
+            publicHeadersPath: "include",
             cxxSettings: [
                 .define("SPIRV_CROSS_C_API_CPP", to: "1"),
                 .define("SPIRV_CROSS_C_API_GLSL", to: "1"),
@@ -75,5 +75,5 @@ let package = Package(
             ]
         ),
     ],
-    cxxLanguageStandard: .cxx14
+    cxxLanguageStandard: .cxx17
 )
